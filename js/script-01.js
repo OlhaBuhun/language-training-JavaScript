@@ -120,3 +120,78 @@ switch (option) {
 console.log(message);
 
 
+// Цикл for;
+
+// for (let i = 100; i >= 16; i -= 8) {
+//   console.log(i);
+// }
+
+// console.log('werty');
+
+
+// Напиши скрипт который подсчитывает общую сумму зарплат работников,
+// Кол-во работников храниться в переменной employees
+// зп каждого работніка это случайное число от 500 до 5000
+// Записать сумму в переменную totalSalary и вывести в консоль
+
+
+// 1.Задать переменные 
+// 2.Перебрать работников в цикле
+// 3. Генерить случайную зп
+// 4. Прибавить зп к тоталу
+// 5. Вывести консоль totalSalary
+
+
+// let totalSalary = 0;
+// const employees = 5;
+// let personeSalary;
+
+// for (let i = 1; i <= employees; i += 1) {
+//   // console.log(i);
+//   personeSalary = Math.round(Math.random() * (5000 - 500) + 500);
+//   console.log(`ЗП работника ${i} - ${personeSalary}`)
+//   totalSalary = totalSalary + personeSalary;
+  
+  
+// }
+// console.log('totalSalary' , totalSalary);
+
+
+// Напиши скрипт который подсчитывает общую сумму всех четных чисел,
+// которые входят в диапазон в переменных от min до max
+// Например, если мин=0 а мах=5, 
+
+// 1. Задать переменные
+// 2. Перебрать четные числа в цикле
+// 3. перебираем с помощью if
+// 4. total всех четных чисел
+// 5. Вывечти консоль total
+
+const min = 6;
+const max = 13;
+let total = 0;
+
+// for (let i = min; i <= max; i += 1) {
+
+//   if (i % 2 === 0) {
+//     console.log(i);
+//     total += i;
+//   }
+  
+// }
+// console.log('Сумма четных чисел' , total);
+
+for (let i = min; i <= max; i += 1) {
+
+  if (i % 2 !== 0) {
+    console.log('не четное число', i);
+    continue;
+
+  }
+  console.log('четное число', i);
+  total += i;
+  
+}
+console.log('Сумма четных чисел' , total);
+
+
