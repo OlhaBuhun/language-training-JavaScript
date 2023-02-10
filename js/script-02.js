@@ -216,15 +216,15 @@ let link = 'https://somesaite.com/about';
 //   console.log('Ok');
 
 // }
-console.log(link.slice(link.length-1) === '/');
-console.log(link.endsWith('/'));
+// console.log(link.slice(link.length-1) === '/');
+// console.log(link.endsWith('/'));
 
-if ( !link.endsWith('/') ) {
-  link += '/';
+// if ( !link.endsWith('/') ) {
+//   link += '/';
   // link = '${linr}/';
   // link = link + '/';
-}
-console.log(link);
+// }ґ
+// console.log(link);
 // інверсія !;
 
 // Напиши скрипт для відображення часу дедлайн здачі проєкту.
@@ -234,8 +234,8 @@ console.log(link);
 // Якщо дедлайн 2 день - виведи 'Післязавтра'
 // Якщо дедлайн 3+ дні - виведи 'Дата в майбутньому'
 
-const deadlineWork = 2;
-
+// const deadlineWork = 2;
+// const deadlineWork = Number(prompt("Enter days"))
 // if (deadlineWork === 0) {
 //   console.log('Сьогодні');
 // } else if(deadlineWork === 1) {
@@ -250,24 +250,24 @@ const deadlineWork = 2;
 
 // let cost;
 
-switch(deadlineWork) {
-  case 0:
-    console.log('Сьогодні');
-  break;
+// switch(deadlineWork) {
+//   case 0:
+//     console.log('Сьогодні');
+//   break;
 
-  case 1:
-    console.log('Завтра');
-  break;
+//   case 1:
+//     console.log('Завтра');
+//   break;
 
-  case 2:
-    console.log('Післязавтра');
-  break;
+//   case 2:
+//     console.log('Післязавтра');
+//   break;
   
-  default:
-    console.log('Дата в майбутньому');
+//   default:
+//     console.log('Дата в майбутньому');
 
-}
-console.log(deadlineWork);
+// }
+// console.log(deadlineWork);
 
 // Напиши цикл for который выводит в консоль числа
 // по увеличению от min до max,
@@ -280,6 +280,104 @@ console.log(deadlineWork);
 //     console.log(i);
 //   }
 //  }
+
+// / - оператор діленя
+// % - оператор залишку від ділення
+
+// Створи світофор
+// const color = prompt('Enter color').toLowerCase();
+
+// switch(color) {
+//   case 'red':
+//     alert("Stop!!!");
+//     break;
+//     case 'yellow':
+//       alert("Ready!!!");
+//       break;
+//       case 'green':
+//         alert("Go!!! || Run!!!");
+//         break;
+//    default:
+//     alert("Be carefull")           
+// }
+// console.log(color);
+
+// Для призначення дефолтного значення потрібно
+
+// const color = prompt('Enter color');
+// console.log(color);
+// const test = color || 'DONT WORK';
+// console.log(test);
+
+// function isNumberNotInRange(start, end, number) {
+//   const isInRange = number >= start && number <= end;
+//   const isNotInRange = !isInRange; // Change this line
+
+//   return isNotInRange;
+// }
+
+// console.log(isNumberNotInRange(10, 30, 17));
+// console.log(isNumberNotInRange(10, 30, 5));
+// console.log(isNumberNotInRange(20, 50, 24));
+// console.log(isNumberNotInRange(20, 50, 76));
+
+// function getDiscount(totalSpent) {
+//   const BASE_DISCOUNT = 0;
+//   const BRONZE_DISCOUNT = 0.02;
+//   const SILVER_DISCOUNT = 0.05;
+//   const GOLD_DISCOUNT = 0.1;
+//   let discount;
+//   // Change code below this line
+//   if(totalSpent < 5000) {
+//     discount =  BASE_DISCOUNT;
+//   } else if(totalSpent >= 5000 && totalSpent < 20000) {
+//     discount = BRONZE_DISCOUNT;
+//   } else if(totalSpent >= 20000 && totalSpent < 50000) {
+//     discount = SILVER_DISCOUNT;
+//   } else {
+//     discount = GOLD_DISCOUNT;
+//   }
+//   // Change code above this line
+//   return discount;
+// }
+
+// console.log(getDiscount(137000));
+// console.log(getDiscount(46900));
+// console.log(getDiscount(8250));
+// console.log(getDiscount(1300));
+
+// function checkStorage(available, ordered) {
+//   let message;
+//   // Change code below this line
+//   message = ordered > available ? "Not enough goods in stock!" : "The order is accepted, our manager will contact you";
+//   // if (ordered > available) {
+//   //   message = "Not enough goods in stock!";
+//   // } else {
+//   //   message = "The order is accepted, our manager will contact you";
+//   // }
+
+//   // Change code above this line
+//   return message;
+// }
+// console.log(checkStorage(100, 50));
+// console.log(checkStorage(100, 130));
+// console.log(checkStorage(200, 20));
+// console.log(checkStorage(200, 150));
+// console.log(checkStorage(150, 180));
+
+function checkPassword(password) {
+  const ADMIN_PASSWORD = "jqueryismyjam";
+  let message;
+  // Change code below this line
+  message = password === ADMIN_PASSWORD ? "Access is allowed" : "Access denied, wrong password!";
+  // Change code above this line
+  return message;
+}
+
+console.log(checkPassword("jqueryismyjam"));
+console.log(checkPassword("angul4r1sl1f3"));
+console.log(checkPassword("r3actsux"));
+
 
 
 
