@@ -206,15 +206,80 @@
 // 2. Якщо link з / 
 // 3. Якщо link без / додаем /
 
-let link = 'https://somesaite.com/about/';
+let link = 'https://somesaite.com/about';
 
-if (link.endsWith('/') === '/') {
-  console.log('Ok');
+// if (link.endsWith('/') ==! 'true') {
+//   link += '/';
+//   console.log(link );
   
-} else {
-  // console.log(link + "/");
+// } else {
+//   console.log('Ok');
+
+// }
+console.log(link.slice(link.length-1) === '/');
+console.log(link.endsWith('/'));
+
+if ( !link.endsWith('/') ) {
+  link += '/';
+  // link = '${linr}/';
+  // link = link + '/';
+}
+console.log(link);
+// інверсія !;
+
+// Напиши скрипт для відображення часу дедлайн здачі проєкту.
+// Використовуй if else.
+// Якщо дедлайн 0 днів - виведи 'Сьогодні'
+// Якщо дедлайн 1 день - виведи 'Завтра'
+// Якщо дедлайн 2 день - виведи 'Післязавтра'
+// Якщо дедлайн 3+ дні - виведи 'Дата в майбутньому'
+
+const deadlineWork = 2;
+
+// if (deadlineWork === 0) {
+//   console.log('Сьогодні');
+// } else if(deadlineWork === 1) {
+//   console.log('Завтра');
+// } else if(deadlineWork === 2) {
+//   console.log('Післязавтра');
+// } else if(deadlineWork >= 3) {
+//   console.log('Дата в майбутньому');
+// } else {
+//   console.log('Ви запізнилися');
+// }
+
+// let cost;
+
+switch(deadlineWork) {
+  case 0:
+    console.log('Сьогодні');
+  break;
+
+  case 1:
+    console.log('Завтра');
+  break;
+
+  case 2:
+    console.log('Післязавтра');
+  break;
+  
+  default:
+    console.log('Дата в майбутньому');
 
 }
+console.log(deadlineWork);
+
+// Напиши цикл for который выводит в консоль числа
+// по увеличению от min до max,
+// но только числа кратные 5
+
+// const max = 100;
+// const min = 20;
+//  for ( let i = min; i <= max; i += 1) {
+//   if (i%5 === 0) {
+//     console.log(i);
+//   }
+//  }
 
 
 
