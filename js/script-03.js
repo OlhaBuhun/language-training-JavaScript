@@ -22,6 +22,21 @@
 // //   total += cart[i];
 // // }
 
+// const cart = function(items) {
+//   console.log('items внутри функции', items);
+
+//   let total = 0;
+
+//   for(const item of items) {
+//     total += item;
+//   }
+
+//   return total;
+// }
+
+// console.log(cart([1,2,3]));
+// console.log(cart([54, 28, 105, 70, 92, 17, 120]));
+
 // // метод for of
 // // for(const value of cart) {
 // //   total += value;
@@ -104,9 +119,27 @@
 // Решение тернарным оператором
 
 const logins = ['m4ngoDobe', 'k1widab3st', 'poly1scute', 'aj4xth3m4n'];
-const loginToFind = 'poly1scute';
-const message = logins.includes(loginToFind) ? `Пользователь ${loginToFind}  найден!!!` : `Пользователь ${loginToFind} не найден!!!`;
-console.log(message);
+// const loginToFind = 'poly1scute';
+// const message = logins.includes(loginToFind) ? `Пользователь ${loginToFind}  найден!!!` : `Пользователь ${loginToFind} не найден!!!`;
+// console.log(message);
+
+const findLogin = function(allLogins, loginToFind) {
+  // console.log(allLogins);
+  // console.log(loginToFind);
+
+  for (const login of allLogins) {
+    // console.log(login);
+
+    if(login === loginToFind) {
+      return `Пользователь ${loginToFind}  найден!!!`
+    }
+
+    return  `Пользователь ${loginToFind} не найден!!!`
+  }
+};
+
+console.log(findLogin(logins, 'adhj12jh'));
+console.log(findLogin(logins, 'm4ngoDobe'));
 
 
 
@@ -230,14 +263,14 @@ console.log(message);
 // Работаем с коллекцией карточек в trello
 // Metod splice, удалить, добавить, обновить
 
-const cards = [
-  'Карточка-1',
-  'Карточка-2',
-  'Карточка-3',
-  'Карточка-4',
-  'Карточка-5',
-];
-console.table(cards);
+// const cards = [
+//   'Карточка-1',
+//   'Карточка-2',
+//   'Карточка-3',
+//   'Карточка-4',
+//   'Карточка-5',
+// ];
+// console.table(cards);
 
 // удаление по индексу
 // const cardToRemove = 'Карточка-3';
@@ -253,17 +286,78 @@ console.table(cards);
 // console.table(cards);
 
 // обновление по индексу
-const cardToUpdate = 'Карточка-4';
-const index = cards.indexOf(cardToUpdate);
-console.log(index);
-cards.splice(index, 1, 'Новая карточка-4');
-console.table(cards);
+// const cardToUpdate = 'Карточка-4';
+// const index = cards.indexOf(cardToUpdate);
+// console.log(index);
+// cards.splice(index, 1, 'Новая карточка-4');
+// console.table(cards);
 
 
 // const deletedCard = cards.splice(2, 1);
 // console.log(deletedCard);
 // console.log(cards);
 
+//   Function
+
+// const add = function(x, y) {
+//   console.log(x);
+//   console.log(y);
+
+//   const result = x + y;
+
+//   console.log('Выполняется add');
+
+//   return result;
+// };
+
+// const r1 = add(5, 3);
+// console.log('r1: ', r1);
+
+// const r2 = add(6, 7);
+// console.log('r2: ', r2);
+
+// const fnA = function() {
+//   console.log('Выполняется функция А');
+// };
+
+// const fnB = function() {
+//   console.log('Выполняется функция B');
+// };
+
+// const fnC = function() {
+//   console.log('Выполняется функция C');
+// };
+
+// console.log('Лог перед вызовом функции А');
+// fnA();
+// console.log('Лог после вызовом функции А');
+
+// console.log('Лог перед вызовом функции B');
+// fnB();
+// console.log('Лог после вызовом функции B');
+
+// console.log('Лог перед вызовом функции C');
+// fnC();
+// console.log('Лог после вызовом функции C');
+
+
+//  const fnA = function() {
+//   console.log('Выполняется функция А');
+
+//   fnB();
+// };
+
+// const fnB = function() {
+//   console.log('Выполняется функция B');
+
+//   fnC();
+// };
+
+// const fnC = function() {
+//   console.log('Выполняется функция C');
+// };
+
+// fnA();
 
 
 
