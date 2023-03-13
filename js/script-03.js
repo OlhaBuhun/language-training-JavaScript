@@ -118,29 +118,40 @@
 
 // Решение тернарным оператором
 
-const logins = ['m4ngoDobe', 'k1widab3st', 'poly1scute', 'aj4xth3m4n'];
-// const loginToFind = 'poly1scute';
-// const message = logins.includes(loginToFind) ? `Пользователь ${loginToFind}  найден!!!` : `Пользователь ${loginToFind} не найден!!!`;
-// console.log(message);
+// const logins = ['m4ngoDobe', 'k1widab3st', 'poly1scute', 'aj4xth3m4n'];
+// // const loginToFind = 'poly1scute';
+// // const message = logins.includes(loginToFind) ? `Пользователь ${loginToFind}  найден!!!` : `Пользователь ${loginToFind} не найден!!!`;
+// // console.log(message);
 
-const findLogin = function(allLogins, loginToFind) {
-  // console.log(allLogins);
-  // console.log(loginToFind);
+// const findLogin = function(allLogins, loginToFind) {
+//   // console.log(allLogins);
+//   // console.log(loginToFind);
 
-  for (const login of allLogins) {
-    // console.log(login);
+//   for (const login of allLogins) {
+//     // console.log(login);
 
-    if(login === loginToFind) {
-      return `Пользователь ${loginToFind}  найден!!!`
-    }
+//     if(login === loginToFind) {
+//       return `Пользователь ${loginToFind}  найден!!!`
+//     }
 
-    return  `Пользователь ${loginToFind} не найден!!!`
-  }
-};
+//     return  `Пользователь ${loginToFind} не найден!!!`
+//   }
+// };
 
-console.log(findLogin(logins, 'adhj12jh'));
-console.log(findLogin(logins, 'm4ngoDobe'));
+// console.log(findLogin(logins, 'adhj12jh'));
+// console.log(findLogin(logins, 'm4ngoDobe'));
 
+// const findLogin = function(allLogins, loginToFind) {
+//   // console.log(allLogins);
+//   // console.log(loginToFind);
+
+//   const message = allLogins.includes(loginToFind) ? `Пользователь ${loginToFind}  найден!!!` : `Пользователь ${loginToFind} не найден!!!`;
+
+//   return message;
+// };
+
+// console.log(findLogin('logins', 'adhj12jh'));
+// console.log(findLogin('logins', 'm4ngoDobe'));
 
 
 
@@ -148,15 +159,16 @@ console.log(findLogin(logins, 'm4ngoDobe'));
 // числа уникальные
 
 // const numbers = [51, 18, 13, 24, 7, 85, 19, 3];
-// // let smallestNumber = numbers[0];
+// let smallestNumber = numbers[0];
 
-// // for(const number of numbers) {
-// //   console.log(number);
-// //   if(number < smallestNumber) {
-// //     smallestNumber = number;
-// //   }
-// // }
-// // console.log('smallestNumber:', smallestNumber);
+// for(const number of numbers) {
+//   console.log(number);
+//   if(number < smallestNumber) {
+//     smallestNumber = number;
+//   }
+// console.log('smallestNumber:', smallestNumber);
+ 
+
 
 // //  Самое большое число
 // let biggestNumber = numbers[0];
@@ -216,6 +228,21 @@ console.log(findLogin(logins, 'm4ngoDobe'));
 // }
 // console.log(invertedString);
 
+// const changeCase = function(string) {
+//   const letters = string.split('');
+//   // console.log(letters);
+//   let invertedString = '';
+
+//   for(const letter of letters) {
+//     invertedString += letter === letter.toLowerCase() ? letter.toUpperCase() : letter.toLowerCase();
+//   }
+
+//   return invertedString;
+// }
+
+// console.log(changeCase('qwRTghhj'));
+// console.log(changeCase('JavaScript'));
+
 
 // Делаем slug и URL из названия строки
 // Заголовок состоит из букв и пробелов
@@ -226,6 +253,20 @@ console.log(findLogin(logins, 'm4ngoDobe'));
 // const title = 'Top 10 benefits of framework';
 // const normalizedTital = title.toLowerCase();
 // const world = normalizedTital.split(' ');
+
+// const slugify = function(string) {
+//   // const normalizedTital = string.toLowerCase();
+//   // const words = normalizedTital.split(' ');
+//   // const slug = words.join('-');
+
+//   // return slug;
+
+//   return  string.toLowerCase().split(' ').join('-');
+
+// }
+
+// console.log(slugify('Top 10 benefits of framework'));
+// console.log(slugify('Azure Static Web are Awesome'));
 
 
 // console.log(world);
@@ -359,5 +400,94 @@ console.log(findLogin(logins, 'm4ngoDobe'));
 
 // fnA();
 
+// const findSmallestNumber = function(numbers) {
+//   let smallestNumber = numbers[0];
+
+//   for(const number of numbers) {
+//     // console.log(number);
+//     if(number < smallestNumber) {
+//       smallestNumber = number;
+//     }   
+// }
+// return smallestNumber;
+// }
+// console.log(findSmallestNumber([13, 78, 23, 1, 6]));
+// console.log(findSmallestNumber([131, 178, -123, 11, 65]));
+// console.log(findSmallestNumber([1, 0, 23, 1, 6]));
+
+//  * Псевдомассив arguments и Array.from и ...
+
+// const fn = function() {
+//   console.log(arguments);
+
+//   const args = Array.from(arguments);
+//   console.log(args);
+// };
+
+// const fn = function(...args) {
+//   console.log(args);
+// }
+
+
+// fn(1, 2, 3);
+// fn(1, 2, 3, 4, 5);
+// fn(1, 2, 3, 4, 5, 6, 7);
+
+// const fn = function(a,...args) {
+//   console.log(`${a}`);
+//   console.log(args);
+// }
+
+
+// fn('hello', 2, 3);
+// fn('aloha', 2, 3, 4, 5);
+// fn('hi', 2, 3, 4, 5, 6, 7);
+
+// Напиши ф-ю add  для сложения произвольного числа аргументов (чисел)
+// Операция ... (rest)
+
+// const add = function(...numbers) {
+//   console.log(numbers);
+//   let total = 0;
+
+//   for(const number of numbers) {
+//     total += number;
+//   }
+
+//   return total;
+// }
+
+// console.log(add(1, 2, 3));
+// console.log(add(1, 2, 3, 4, 5, 6));
+
+
+// Напиши функцию filterNumbers (array [, number1, ...]) которая:
+// первым аргументом принимает массив чисел
+// после первого аргумента может быть произвольное колличество других элементов которые будут числами.
+// Функция должна вернуть новый массив, в котором только те аргументы, начиная со второго, для которго есть аналог в оригинальном массиве.
+
+const filterNumbers = function(array1, ...numbers) {
+  // console.log(array1);
+  // console.log(numbers);
+
+  const uniqueElements = [];
+
+  for (const number of numbers) {
+
+    if(array1.includes(number)) {
+      uniqueElements.push(number);
+      console.log(`${number} есть везде`);
+
+    }
+  }
+
+  // console.log(uniqueElements);
+
+  return uniqueElements
+};
+
+console.log(filterNumbers([1, 2, 3, 4, 5], 10, 2, 18, 5));
+console.log(filterNumbers([11, 12, 31, 42, 51], 31, 22, 18, 51));
+console.log(filterNumbers([100, 200, 300], 100, 2, 18, 5));
 
 

@@ -643,28 +643,209 @@
 // 3. спомощью if сравниваем элементы массива с value
 // 4. если есть совпадение ставим true
 
-function includes(array, value) {
-  // Change code below this line
-  let coincided;
+// function includes(array, value) {
+//   // Change code below this line
+//   let coincided;
 
-  for ( let i = 0; i < array.length; i += 1) {
+//   for ( let i = 0; i < array.length; i += 1) {
 
-    if ( array[i] === value) {
-      coincided = true;
+//     if ( array[i] === value) {
+//       coincided = true;
       
-      return coincided;
-    } 
+//       return coincided;
+//     } 
      
-  }
-  coincided = false;
-  return coincided
-  // Change code above this line
+//   }
+//   coincided = false;
+//   return coincided
+//   // Change code above this line
+// }
+
+// console.log(includes([1, 2, 3, 4, 5], 3));
+// console.log(includes([1, 2, 3, 4, 5], 17));
+// console.log(includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Jupiter"));
+// console.log(includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Uranus"));
+// console.log(includes(["apple", "plum", "pear", "orange"], "plum"));
+// console.log(includes(["apple", "plum", "pear", "orange"], "kiwi"));
+// console.log(includes([16, 5, 19, 70], 52));
+
+//  Приклади з областямі видимості
+// let a = 20;
+
+// if(true) {
+//   let a = 5;
+//   console.log('in local', a);
+// }
+
+// console.log('in global', a);
+
+// Ошибка 
+// let a = 20;
+
+// if(true) {
+//   console.log('in local', a);
+//   let a = 5;
+// }
+
+// console.log('in global', a);
+
+// 15
+// let a = 10;
+
+// if(true) {
+
+//   a = 15;
+// }
+
+// console.log(a);
+
+
+// Ошибка
+// const a = 10;
+
+// if(true) {
+
+//   a = 15;
+// }
+
+// console.log(a);
+
+// const a = 10;
+
+// if(true) {
+//   let a = 5;
+//   a = 15;
+
+//   console.log('in local', a);
+// }
+
+// console.log('in global', a);
+
+// _________________________
+
+// let a = 10;
+
+// if(true) {
+//   // let a = 100;
+//   a = 1;
+
+//   if(true) {
+//     // a = 15;
+//     // let a = 25;
+//     a = 15;
+//     console.log('local 2', a);
+//   }
+
+//   console.log('local', a);
+// }
+
+// console.log('global', a);
+
+// ____________________________________________________
+
+//  Створення та види функций
+
+// function expression - викдикается тількі після оголошення
+// const world = 'world';
+// const hello = 'Hello';
+// // foo(world, hello); буде помилка
+// const foo = function(hello,world) {
+//   console.log(hello,world);
+// }
+
+// foo (world, hello);
+
+// // function declaretion - можно оголошивата до оголошення ф-іі
+
+// boo(hello,world);
+// function boo (hello, world) {
+//   console.log(hello, world);
+// }
+
+// console.log(hello,world);
+// boo(hello,world);
+
+
+// _____________________________________________
+// console.log(globalThis);
+// console.log(window.innerWidth);
+// window.console.log(globalThis.innerHeight);
+
+
+// const mySity = {
+//   city: 'New York',
+//   cityGreeting: function() {
+//     console.log('Greetings!!!');
+//   }
+// }
+// mySity.cityGreeting();
+
+// const mySity = {
+//   city: 'New York',
+//   cityGreeting() {
+//     console.log('Greetings!!!');
+//   }
+// }
+// mySity.cityGreeting();
+// console.log(mySity.city);
+
+// const post = {
+//   title: 'My post',
+//   likesQty: 5
+// }
+// console.log(post);
+
+// console.log(JSON.stringify(post));
+
+// const postStringify = JSON.stringify(post);
+// console.log(postStringify);
+
+// console.log(JSON.parse(postStringify));
+
+// _________________________________
+
+// function printMyName() {
+//   console.log('Olha');
+// }
+
+// console.log('start');
+// setTimeout (printMyName, 3000);
+
+// ________________________________
+
+// arguments 
+// Порухуваті суму всіх чисел
+
+// function getSum () {
+//   console.log(arguments);
+//   const arr = Array.from(arguments);
+//   console.log(arr);
+
+//   const arr2 = [...arguments];
+//   console.log(arr2);
+
+//   let total = 0;
+//   for (const argument of arguments) {
+//     // console.log(argument);
+//     total += argument;
+//   }
+
+//   return total;
+// };
+
+//  console.log(getSum (1, 2, 3, 4, 5, 6, 7, 8));
+//  console.log(getSum (44, 5, 11, 23));
+
+// Стек викликів
+
+function foo () {
+  console.log('Start foo');
 }
 
-console.log(includes([1, 2, 3, 4, 5], 3));
-console.log(includes([1, 2, 3, 4, 5], 17));
-console.log(includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Jupiter"));
-console.log(includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Uranus"));
-console.log(includes(["apple", "plum", "pear", "orange"], "plum"));
-console.log(includes(["apple", "plum", "pear", "orange"], "kiwi"));
-console.log(includes([16, 5, 19, 70], 52));
+function boo () {
+  console.log('Start boo');
+  foo ();
+  console.log('End boo');
+}
+
+boo ();
