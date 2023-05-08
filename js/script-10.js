@@ -219,23 +219,49 @@
 
 // 12
 
-// Change code below this line
-const getCommonElements = (firstArray, secondArray) => {
-  const commonElements = [];
+// // Change code below this line
+// const getCommonElements = (firstArray, secondArray) => {
+//   const commonElements = [];
 
-  firstArray.forEach(element => {
-    if (secondArray.includes(element)) {
-      commonElements.push(element);
+//   firstArray.forEach(element => {
+//     if (secondArray.includes(element)) {
+//       commonElements.push(element);
+//     }
+//   });
+
+//   // Change code above this line
+//   return commonElements;
+// }
+
+// console.log(getCommonElements([1, 2, 3], [2, 4]));
+// console.log(getCommonElements([1, 2, 3], [2, 1, 17, 19]));
+// console.log(getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27]));
+// console.log(getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40]));
+// console.log(getCommonElements([1, 2, 3], [10, 20, 30]));
+// console.log(getCommonElements([12, 21, 32], [12, 4]));
+
+// 13
+
+function changeEven(numbers, value) {
+  // Change code below this line
+  const newNumbers = [];
+
+  numbers.forEach(element => {
+    if(element %2 === 0) {
+      element += value
     }
-  });
-
+    newNumbers.push(element);
+  })
+  return newNumbers;
+  // for (let i = 0; i < numbers.length; i += 1) {
+  //   if (numbers[i] % 2 === 0) {
+  //     numbers[i] = numbers[i] + value;
+  //   }
+  // }
   // Change code above this line
-  return commonElements;
 }
 
-console.log(getCommonElements([1, 2, 3], [2, 4]));
-console.log(getCommonElements([1, 2, 3], [2, 1, 17, 19]));
-console.log(getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27]));
-console.log(getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40]));
-console.log(getCommonElements([1, 2, 3], [10, 20, 30]));
-console.log(getCommonElements([12, 21, 32], [12, 4]));
+console.log(changeEven([1, 2, 3, 4, 5], 10));
+console.log(changeEven([2, 8, 3, 7, 4, 6], 10));
+console.log(changeEven([17, 24, 68, 31, 42], 100));
+console.log(changeEven([44, 13, 81, 92, 36, 54], 100));
