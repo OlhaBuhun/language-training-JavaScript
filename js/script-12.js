@@ -188,23 +188,23 @@
 
 // ---------------------------------------------------
 
-const tweets = [
-  {id: '000', likes: 5, tags: ['js', 'nodejs']},
-  {id: '001', likes: 3, tags: ['html', 'css']},
-  {id: '002', likes: 15, tags: ['html','js', 'nodejs']},
-  {id: '003', likes: 8, tags: ['css', 'react']},
-  {id: '004', likes: 0, tags: ['js', 'nodejs', 'react']},
-];
+// const tweets = [
+//   {id: '000', likes: 5, tags: ['js', 'nodejs']},
+//   {id: '001', likes: 3, tags: ['html', 'css']},
+//   {id: '002', likes: 15, tags: ['html','js', 'nodejs']},
+//   {id: '003', likes: 8, tags: ['css', 'react']},
+//   {id: '004', likes: 0, tags: ['js', 'nodejs', 'react']},
+// ];
 
-const allTags = tweets.reduce((tags, tweet) => {
-  // tags.push(...tweet.tags);
+// const allTags = tweets.reduce((tags, tweet) => {
+//   // tags.push(...tweet.tags);
 
-  // return tags;
+//   // return tags;
 
-  return [...tags, ...tweet.tags];
-}, []);
+//   return [...tags, ...tweet.tags];
+// }, []);
 
-console.log(allTags);
+// console.log(allTags);
 
 // Стастика тегов
 
@@ -227,27 +227,173 @@ console.log(allTags);
 // если свойства нет, то записую 1
 
 
-// то же имутабельность
-const tagsStats = allTags.reduce((acc,tag) => {
-  // console.log(acc);
+// // то же имутабельность
+// const tagsStats = allTags.reduce((acc,tag) => {
+//   // console.log(acc);
 
-  // if(acc[tag]) {
-  //   return {
-  //     ...acc,
-  //     [tag]: acc.tag + 1,
-  //   };
-  // }
-  // acc[tag] = 1;
+//   // if(acc[tag]) {
+//   //   return {
+//   //     ...acc,
+//   //     [tag]: acc.tag + 1,
+//   //   };
+//   // }
+//   // acc[tag] = 1;
 
-  // return {
-  //   ...acc,
-  //   [tag]: 1,
-  // };
+//   // return {
+//   //   ...acc,
+//   //   [tag]: 1,
+//   // };
 
-  return {
-    ...acc,
-    [tag]: acc[tag] ? acc[tag] + 1 : 1,
+//   return {
+//     ...acc,
+//     [tag]: acc[tag] ? acc[tag] + 1 : 1,
+//   }
+// }, {});
+
+// console.log(tagsStats);
+
+// ----------------------
+
+// Метод sort()
+
+// const numbers = [3, 1, 16, 2];
+// // numbers.sort();
+// // numbers.sort((curEl, nextEl) => curEl - nextEl);
+// const copy = [...numbers].sort((curEl, nextEl) => nextEl - curEl);
+
+// console.log('numbers', numbers);
+// console.log('copy', copy);
+
+// const liters = ['b','B','a','A'];
+// // liters.sort();
+
+
+// console.log('liters', liters);
+
+//  const players = [
+//   { id: 'player-1', name: 'Mango', timePlayed: 310, points: 54, online: false},
+//   { id: 'player-2', name: 'Poly', timePlayed: 456, points: 48, online: true},
+//   { id: 'player-3', name: 'Kiwi', timePlayed: 127, points: 97, online: false},
+//   { id: 'player-4', name: 'Ajax', timePlayed: 615, points: 65, online: true},
+//   { id: 'player-5', name: 'Chelsy', timePlayed: 254, points: 48, online: true},
+// ];
+
+//   const sortByBestPlayers = [...players].sort((prevPlayer, nextPlayer) => prevPlayer.timePlayed - nextPlayer.timePlayed);
+
+//   const buName = [...players].sort((prevPlayer, nextPlayer) => prevPlayer.name.localeCompare(nextPlayer.name));
+
+//   console.table(sortByBestPlayers);
+//   console.table(buName);
+
+// ----------------------------------------------
+
+
+// const array = [1, 2, [4, [5]], [6, [7,8, [9]]]];
+// console.log(array);
+// console.log(array.flat(3));
+
+// -------------------------
+
+// const tweets = [
+//   {id: '000', likes: 5, tags: ['js', 'nodejs']},
+//   {id: '001', likes: 3, tags: ['html', 'css']},
+//   {id: '002', likes: 15, tags: ['html','js', 'nodejs']},
+//   {id: '003', likes: 8, tags: ['css', 'react']},
+//   {id: '004', likes: 0, tags: ['js', 'nodejs', 'react']},
+// ];
+
+// const tags = tweets.flatMap(t => t.tags);
+
+// const stats = tags.reduce((acc, tag) => {
+//   return {
+//     ...acc,
+//     [tag]: acc[tag] ? acc[tag] + 1 : 1,
+//   }
+// })
+
+// console.log(tags);
+// console.log(stats);
+
+// -------------------------------
+
+// Ланцюжки методів
+
+// const numbers = [1, 5, 2, 4, 3];
+
+// const sorted = numbers.filter(number => number > 2).map(num => num * 3).sort((a, b) => a - b);
+
+// console.log(sorted);
+
+// -----------------------------------
+
+// const players = [
+//   {id: 'id-1', tag: 'Mango', isOnline: true, rank: 800},
+//   {id: 'id-2', tag: 'Poly', isOnline: false, rank: 600},
+//   {id: 'id-3', tag: 'Ajax', isOnline: true, rank: 100},
+//   {id: 'id-4', tag: 'Kiwi', isOnline: true, rank: 400},
+//   {id: 'id-5', tag: 'Chelsy', isOnline: false, rank: 900},
+// ];
+// // rang ті що online
+
+// const onlineAndSorted = players.filter(player => !player.isOnline).sort((a, b) => a.rank - b.rank);
+
+// console.table(onlineAndSorted);
+
+// ------------------
+
+// const element = {
+//   class: '',
+//   hovered: false,
+//   changeClass(cls) {
+//     this.class = cls;
+
+//     return this;
+//   },
+//   toggleHovered(){
+//     this.hovered = !this.hovered;
+
+//     return this;
+//   },
+// };
+
+// element.toggleHovered().changeClass('open');
+// console.log(element);
+
+// -------------------------------
+
+// const tweets = [
+//   {id: '000', likes: 5, tags: ['js', 'nodejs']},
+//   {id: '001', likes: 3, tags: ['html', 'css']},
+//   {id: '002', likes: 15, tags: ['html','js', 'nodejs']},
+//   {id: '003', likes: 8, tags: ['css', 'react']},
+//   {id: '004', likes: 0, tags: ['js', 'nodejs', 'react']},
+// ];
+
+// // const tags = tweets.flatMap(t => t.tags);
+
+// // const stats = tags.reduce((acc, tag) => {
+// //   return {
+// //     ...acc,
+// //     [tag]: acc[tag] ? acc[tag] + 1 : 1,
+// //   }
+// // })
+
+// const stats = tweets.flatMap(t => t.tags)
+// .reduce((acc, tag) => ({
+//         ...acc,
+//         [tag]: acc[tag] ? acc[tag] + 1 : 1, 
+// }), {},
+// )
+
+// console.log(stats);
+
+// ---------------------
+
+const user = {
+  name: 'Mango',
+  location: {
+    // city: 'Lviv'
   }
-}, {});
+}
 
-console.log(tagsStats);
+console.log(user?.location?.city);
