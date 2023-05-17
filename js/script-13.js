@@ -139,23 +139,23 @@ const cars = [
 
 // Потрібно повернути об'єле де ключом є назва літери а значенням та кількість раз скільки ця літера зустрічаеться в рядку
 
-const str = 'weeegfhjjjvbbxggnDAss';
-const str1 = 'nnvgggddsuCFghjksERtyuiIYTR';
+// const str = 'weeegfhjjjvbbxggnDAss';
+// const str1 = 'nnvgggddsuCFghjksERtyuiIYTR';
 
-const foo = str => {
-  str = str.split('');
-  // console.log(str);
+// const foo = str => {
+//   str = str.split('');
+//   console.log(str);
 
-  return str.reduce((acc, el) => {
-    if(acc.hasOwnProperty(el)){
-      acc[el] += 1;
-    }else {
-      acc[el] = 1;
-    }
-    return acc
-  }, {})
-}
+//   return str.reduce((acc, el) => {
+//     if(acc.hasOwnProperty(el)){
+//       acc[el] += 1;
+//     }else {
+//       acc[el] = 1;
+//     }
+//     return
+//   }, {})
+// }
 
-console.log(foo(str));
-console.log(foo(str1));
+// console.log(foo(str));
+// console.log(foo(str1));
 
