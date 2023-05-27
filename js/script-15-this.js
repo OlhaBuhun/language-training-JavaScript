@@ -337,20 +337,44 @@
 
 // ======= Метод bind() =============
 
-const objA = {
-  name: 'A',
-  age: 22,
-  myAge(a, b) {
-    console.log(this, a, b);
-    return 'Some value'
-  }
-}
+// const objA = {
+//   name: 'A',
+//   age: 22,
+//   myAge(a, b) {
+//     console.log(this, a, b);
+//     return 'Some value'
+//   }
+// }
 
-const objB = {
-  name: 'B'
+// const objB = {
+//   name: 'B'
+// }
+// const result = objA.myAge.bind(objB);
+// result(34, 66);
+// result(12, 66);
+// result(2, 6);
+// objA.myAge(23,17);
+
+// ============
+// const arr = [1, 2, 3]
+// const str = 'hello word';
+// console.dir(typeof str);
+
+// String.prototype.sayTest = function(name){
+//   console.log(`Hello from prototype ${name}`);
+// }
+
+// str.sayTest('Olha')
+
+const arr = [1,2,3,4,5];
+
+Array.prototype.customEach = function (arr){
+  for (let i = 0; i < arr.length; i ++){
+    const element = arr[i];
+    console.log(element);
+  }
+  console.log('Magic!!!');
 }
-const result = objA.myAge.bind(objB);
-result(34, 66);
-result(12, 66);
-result(2, 6);
-objA.myAge();
+// так робити не можно
+
+arr.customEach(arr)
